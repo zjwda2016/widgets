@@ -14,13 +14,13 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'itmihang';                 // SMTP username
-    $mail->Password = 'Mujunqiao1990';                           // SMTP password
+    $mail->Username = '[Username]';                 // SMTP username
+    $mail->Password = '[Password]';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('itmihang@example.com', 'itmihang');
+    $mail->setFrom('[email@example.com]', '[name]');
 
     $S_name=$_POST['name'];
     $S_email=$_POST['email'];
@@ -30,15 +30,15 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject ="From ".$S_name."'s Information"; //郵件標題
+    $mail->Subject ="From ".$S_name."'s Information"; //mail of title
     $mail->Body = "Name: ".$S_name."<br />Email: ".$S_email."<br />Email: ".$S_phone."<br />Message: ".$S_message;
   	
 
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 	
-  	$mail->IsHTML(true);                             //郵件內容為html
-    $mail->AddAddress("$S_email");            //收件者郵件及名稱
-  	$mail->AddAddress('jtrvsconan@gmail.com');            //收件者郵件及名稱
+  	$mail->IsHTML(true);                             
+    $mail->AddAddress("$S_email");            
+  	$mail->AddAddress('[email@example.com]');            //Recipient's mail and name
     $mail->send();
 	
   	echo "<script>

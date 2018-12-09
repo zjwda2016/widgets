@@ -3,9 +3,9 @@
     function db_connect() {
       	
       	$myHostName = "localhost";
-		$myUserName = "root";
-		$myPassword = "aa81f82fb1bb605c";
-		$myDatabase = "demo";
+		$myUserName = "[UserName]";
+		$myPassword = "[Password]";
+		$myDatabase = "[DatabaseName]";
       
     	$myConn = mysqli_connect($myHostName, $myUserName, $myPassword, $myDatabase) or die(myerror(__FILE__,__LINE__,mysql_error()));
       	if (!$myConn) {

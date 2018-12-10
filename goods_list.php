@@ -39,7 +39,7 @@ if(mysqli_num_rows($result) > 0)
       $rowThreeBack ++;
     }
 }else{//inform there are no records
-    echo '<h3 class="post-title">There are currently no engagements</h3>';
+    echo '<h3 class="post-title">Nothing</h3>';
 } 
 echo '</div>';
 //release web server resources
